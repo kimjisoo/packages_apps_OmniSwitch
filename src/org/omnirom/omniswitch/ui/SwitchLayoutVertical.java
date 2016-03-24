@@ -483,14 +483,14 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
     protected void flipToAppDrawerNew() {
         mRecents.setVisibility(View.GONE);
         mAppDrawer.setVisibility(View.VISIBLE);
-        enableOpenFavoriteButton(false);
+        enableOpenFavoriteButton(true);
     }
 
     @Override
     protected void flipToRecentsNew() {
         mAppDrawer.setVisibility(View.GONE);
         mRecents.setVisibility(View.VISIBLE);
-        enableOpenFavoriteButton(true);
+        enableOpenFavoriteButton(false);
     }
 
     @Override
