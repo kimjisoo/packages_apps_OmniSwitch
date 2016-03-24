@@ -46,7 +46,7 @@ import android.util.Log;
 public class RecentTasksLoader {
     private static final String TAG = "RecentTasksLoader";
     private static final boolean DEBUG = false;
-    private static final int MAX_TASKS = 50;
+    private static final int MAX_TASKS = 10;
 
     private Context mContext;
     private AsyncTask<Void, List<TaskDescription>, Void> mTaskLoader;
@@ -242,7 +242,7 @@ public class RecentTasksLoader {
             @Override
             protected Void doInBackground(Void... params) {
                 final int origPri = Process.getThreadPriority(Process.myTid());
-                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+                Process.setThreadPriority(Process.THREAD_PRIORITY_DISPLAY);
                 final PackageManager pm = mContext.getPackageManager();
 
                 final List<ActivityManager.RecentTaskInfo> recentTasks = mActivityManager
@@ -446,7 +446,7 @@ public class RecentTasksLoader {
             @Override
             protected Void doInBackground(Void... params) {
                 final int origPri = Process.getThreadPriority(Process.myTid());
-                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+                Process.setThreadPriority(Process.THREAD_PRIORITY_DISPLAY);
 
                 if (DEBUG){
                     Log.d(TAG, "late load thumb " + td + " " + td.persistentTaskId);
