@@ -314,7 +314,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         mView.setTranslationX(0);
         mVirtualBackKey = false;
         mShowThumbs = false;
-        enableOpenFavoriteButton(true);
+        enableOpenFavoriteButton(false);
         mOpenFavorite.setRotation(getExpandRotation());
         if (Utils.isLockToAppEnabled(mContext)) {
             updatePinAppButton();
@@ -444,7 +444,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         }
         item.setTextSize(mConfiguration.mLabelFontSize);
         item.setEllipsize(TextUtils.TruncateAt.END);
-        item.setGravity(Gravity.CENTER);
+        item.setGravity(Gravity.CENTER_VERTICAL);
         item.setMaxLines(1);
         item.setCanSideHeader(true);
         item.setLayoutParams(getRecentListItemParams());
@@ -464,7 +464,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
 
         mRecents.setVisibility(View.GONE);
         mAppDrawer.setVisibility(View.VISIBLE);
-        enableOpenFavoriteButton(false);
+        enableOpenFavoriteButton(true);
     }
 
     @Override
@@ -472,7 +472,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         mRecentsOrAppDrawer.removeView(mAppDrawer);
         mAppDrawer.setVisibility(View.GONE);
         mRecents.setVisibility(View.VISIBLE);
-        enableOpenFavoriteButton(true);
+        enableOpenFavoriteButton(false);
     }
 
     @Override
