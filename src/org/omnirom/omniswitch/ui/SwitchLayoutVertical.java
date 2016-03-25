@@ -333,7 +333,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         mView.setTranslationX(0);
         mVirtualBackKey = false;
         mShowThumbs = false;
-        enableOpenFavoriteButton(true);
+        enableOpenFavoriteButton(false);
         mOpenFavorite.setRotation(getExpandRotation());
     }
 
@@ -469,7 +469,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         }
         item.setTextSize(mConfiguration.mLabelFontSize);
         item.setEllipsize(TextUtils.TruncateAt.END);
-        item.setGravity(Gravity.CENTER);
+        item.setGravity(Gravity.CENTER_VERTICAL);
         item.setMaxLines(1);
         item.setCanSideHeader(true);
         item.setLayoutParams(getRecentListItemParams());
