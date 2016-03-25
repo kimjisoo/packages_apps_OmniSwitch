@@ -54,6 +54,11 @@
 			android:orientation="horizontal" >
 
 			<ListView
+				android:id="@+id/favorite_list"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:divider="@null" />
+			<ListView
 				android:id="@+id/recent_list"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
@@ -67,11 +72,6 @@
 				android:text="@string/no_recent_apps_title"
 				android:textSize="20sp"
 				android:visibility="gone" />
-			<ListView
-				android:id="@+id/favorite_list"
-				android:layout_width="wrap_content"
-				android:layout_height="match_parent"
-				android:divider="@null" />
 		</LinearLayout>
 
 		<GridView
