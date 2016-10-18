@@ -199,7 +199,7 @@ public class Utils {
     }
 
     public static boolean isMultiStackEnabled(Context context) {
-        return "true".equals(SystemProperties.get("persist.sys.debug.multi_window"));
+        return true;
     }
 
     public static void updateFavoritesList(Context context, SwitchConfiguration config, List<String> favoriteList) {
