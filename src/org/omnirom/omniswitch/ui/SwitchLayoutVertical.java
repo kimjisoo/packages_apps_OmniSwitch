@@ -558,7 +558,7 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         }
         if (mConfiguration.mBgStyle != SwitchConfiguration.BgStyle.TRANSPARENT) {
             mButtonListContainer.setBackground(mContext.getResources()
-                    .getDrawable(R.drawable.overlay_bg_button_gradient));
+                    .getDrawable(R.drawable.overlay_bg_button_flat));
             mButtonListContainer.setOutlineProvider(BUTTON_OUTLINE_PROVIDER);
         } else {
             mButtonListContainer.setBackground(null);
@@ -566,10 +566,10 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
         }
         if (mConfiguration.mBgStyle == SwitchConfiguration.BgStyle.SOLID_LIGHT) {
             mView.setBackground(mContext.getResources().getDrawable(
-                    R.drawable.overlay_bg_flat_gradient));
+                    R.drawable.overlay_bg_flat));
         } else if (mConfiguration.mBgStyle == SwitchConfiguration.BgStyle.SOLID_DARK) {
             mView.setBackground(mContext.getResources().getDrawable(
-                    R.drawable.overlay_bg_flat_dark_gradient));
+                    R.drawable.overlay_bg_flat_dark));
         } else {
             mView.setBackground(mContext.getResources().getDrawable(
                     R.drawable.overlay_bg));

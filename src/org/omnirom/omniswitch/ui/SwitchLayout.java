@@ -578,7 +578,7 @@ public class SwitchLayout extends AbstractSwitchLayout {
         }
         if (mConfiguration.mBgStyle == SwitchConfiguration.BgStyle.SOLID_LIGHT) {
             mView.setBackground(mContext.getResources().getDrawable(
-                    R.drawable.overlay_bg_flat_gradient));
+                    R.drawable.overlay_bg_flat));
         } else if (mConfiguration.mBgStyle == SwitchConfiguration.BgStyle.SOLID_DARK) {
             mView.setBackground(mContext.getResources().getDrawable(
                     R.drawable.overlay_bg_flat_dark));
